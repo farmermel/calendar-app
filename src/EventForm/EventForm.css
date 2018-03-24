@@ -1,0 +1,26 @@
+#event-form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F0F0F0;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 0 0 24px grey;
+  width: 100%;
+  margin: 110px 0;
+  height: 400px;
+  grid-column-start: 2;
+  grid-column-end: 7;
+  z-index: 1;
+}
+
+legend {
+  font-size: 2em;
+  padding: 0 0 20px 0;
+}
+
+input {
+  height: 40px;
+  width: 80%;
+}
