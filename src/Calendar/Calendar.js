@@ -12,7 +12,7 @@ const generateMonths = () => {
     let month = monthArr[k];
     for(let i = 0; i < 30; i++) {
       let weekday = weekdayArr[(i%7)];
-      monthArray.push({date: i+1, weekday, month})
+      monthArray.push({date: i+1, weekday, month, events: []})
     }
   }
   return monthArray;
@@ -40,8 +40,21 @@ class Calendar extends Component {
     });
   }
 
+  associateEvents = () => {
+    return months.map( date => {
+      date.events = [];
+      this.state.events.forEach( event => {
+        if(event.dayInput == date.date && event.monthInput === date.month) {
+          date.events.push(event);
+        };
+      })
+      return date;
+    })
+  }
+
   displayDays = () => {
-    return months.map( day => {
+    const daysWithEvents = this.associateEvents();
+    return daysWithEvents.map( day => {
       return <Day day={day}
                   handleDblClick={this.handleDblClick} />
     });

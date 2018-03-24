@@ -1,6 +1,13 @@
 .day {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   height: 140px;
   border: 1px solid #F0F0F0;
+}
+
+.event-name {
+  margin: auto;
+  background-color: #F3DAEF;
+  width: 94%;
 }
