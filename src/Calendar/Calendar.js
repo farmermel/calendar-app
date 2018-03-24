@@ -32,10 +32,17 @@ const displayDays = () => {
   })
 }
 
+const displayWeekDays = () => {
+  return weekdayArr.map( wkday => {
+    return <div>{wkday}</div>
+  })
+}
+
 class Calendar extends Component {
   render() {
     return (
       <div className="calendar">
+        {displayWeekDays()}
         {displayDays()}
       </div>
     )

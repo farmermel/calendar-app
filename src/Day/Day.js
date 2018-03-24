@@ -3,9 +3,8 @@ import './Day.css';
 
 class Day extends Component {
   render() {
-  console.log(this.props.day)
     return (
-      <div className="calendar">
+      <div className="day">
         <p>{this.props.day.date}</p>
       </div>
     )
