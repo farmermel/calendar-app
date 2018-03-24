@@ -3,9 +3,12 @@ import './Day.css';
 
 class Day extends Component {
   render() {
+    const {handleDblClick, day} = this.props
+
     return (
-      <div className="day">
-        <p>{this.props.day.date}</p>
+      <div className="day"
+           onDoubleClick={() => handleDblClick(day)}>
+        <p>{day.date}</p>
       </div>
     )
   }
