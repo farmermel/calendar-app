@@ -11,3 +11,11 @@
   background-color: #F3DAEF;
   width: 94%;
 }
+
+.event-details {
+  border-radius: 5px;
+  position: absolute;
+  background-color: #F0F0F0;
+  box-shadow: 0 0 24px grey;
+  width: 260px;
+}

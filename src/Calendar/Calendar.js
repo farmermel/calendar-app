@@ -25,7 +25,8 @@ class Calendar extends Component {
     super(props);
     this.state = {
       events: this.props.events,
-      formactive: false
+      formactive: false,
+      eventactive: false
     }
   }
 
@@ -52,11 +53,42 @@ class Calendar extends Component {
     })
   }
 
+  handleSelectEvent = selectedEvent => {
+    const events = [...this.state.events];
+    const updatedEvents = events.map( event => {
+      event.active = false;
+      if(event.eventname === selectedEvent.eventname && event.dayInput === selectedEvent.dayInput) {
+        event.active = true;
+      }
+      return event
+    })
+
+    this.setState({
+      events: updatedEvents,
+      eventactive: selectedEvent
+    })
+  }
+
+  handleCloseEvent = () => {
+    const events = [...this.state.events];
+    const updatedEvents = events.map( event => {
+      event.active = false;
+      return event;
+    })
+    this.setState({
+      events: updatedEvents,
+      eventactive: false
+    })
+  }
+
   displayDays = () => {
     const daysWithEvents = this.associateEvents();
-    return daysWithEvents.map( day => {
+    return daysWithEvents.map( (day, i) => {
       return <Day day={day}
-                  handleDblClick={this.handleDblClick} />
+                  handleDblClick={this.handleDblClick}
+                  selectEvent={this.handleSelectEvent}
+                  closeEvent={this.handleCloseEvent}
+                  key={i} />
     });
   }
 
