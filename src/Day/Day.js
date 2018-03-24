@@ -4,9 +4,8 @@ import './Day.css';
 const displayEvents = (events, selectEvent, closeEvent) => {
   return events.map( (event, i) => {
     return (
-      <div>
-        <p className='event-name'
-          onClick={() => selectEvent(event)}
+      <div className='event-name'>
+        <p onClick={() => selectEvent(event)}
           key={i}>{event.eventname}</p>
         {
           event.active &&

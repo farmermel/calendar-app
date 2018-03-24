@@ -11,6 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>April 2018</h1>
         <Calendar events={starterEvents} />
       </div>
     );

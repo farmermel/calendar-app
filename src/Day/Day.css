@@ -3,13 +3,17 @@
   flex-direction: column;
   align-items: flex-end;
   height: 140px;
-  border: 1px solid #F0F0F0;
+  border: 1px solid #d4d4d4;
 }
 
 .event-name {
   margin: auto;
   background-color: #F3DAEF;
   width: 94%;
+}
+
+.event-name p {
+  margin: 3px 0;
 }
 
 .event-details {
