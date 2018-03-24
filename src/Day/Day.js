@@ -6,7 +6,7 @@ const displayEvents = (events, selectEvent, closeEvent) => {
     return (
       <div className='event-name'>
         <p onClick={() => selectEvent(event)}
-          key={i}>{event.eventname}</p>
+           key={i}>{event.eventname}</p>
         {
           event.active &&
           (<article className='event-details'>
@@ -26,10 +26,14 @@ const Day = ({handleDblClick, day, selectEvent, closeEvent}) => {
   return (
     <div className='day'
          onDoubleClick={() => handleDblClick(day)}>
-      <p>{day.date}</p>
-      {
-        day.events && displayEvents(day.events, selectEvent, closeEvent)
-      }
+      <p>{day.date === 1 
+          ? `${day.month} ${day.date}` 
+          : day.date}</p>
+      <section className='events-wrap'>
+        {
+          day.events && displayEvents(day.events, selectEvent, closeEvent)
+        }
+      </section>
     </div>
   )
 }

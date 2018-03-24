@@ -6,14 +6,30 @@
   border: 1px solid #d4d4d4;
 }
 
-.event-name {
-  margin: auto;
-  background-color: #F3DAEF;
+.day p {
+  margin: 6px 8px;
+}
+
+.events-wrap {
   width: 94%;
+  margin: auto;
+  overflow-y: scroll;
+}
+
+.event-name {
+  background-color: #f3daef;
+  border-radius: 3px;
 }
 
 .event-name p {
+  padding: 4px;
   margin: 3px 0;
+}
+
+.event-name:active,
+.event-name:hover {
+  background-color: #cf73d2;
+  color: #fff;
 }
 
 .event-details {

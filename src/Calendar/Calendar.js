@@ -31,7 +31,6 @@ class Calendar extends Component {
   }
 
   handleDblClick = day => {
-    console.log(day)
     this.setState({formactive: day})
   }
 
