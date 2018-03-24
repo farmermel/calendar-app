@@ -1,20 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Day.css';
 
-const displayEvents = events => {
-  console.log(events)
-  return events.map( event => {
-    return <p className='event-name'>{event.eventname}</p>
+const displayEvents = (events, selectEvent, closeEvent) => {
+  return events.map( (event, i) => {
+    return (
+      <div>
+        <p className='event-name'
+          onClick={() => selectEvent(event)}
+          key={i}>{event.eventname}</p>
+        {
+          event.active &&
+          (<article className='event-details'>
+            <button onClick={closeEvent}>X</button>
+            <h3>{event.eventname}</h3>
+            <p>Date: {`${event.monthInput} ${event.dayInput}`}</p>
+            <p>Start: {event.starttime}</p>
+            <p>End: {event.endtime}</p>
+           </article>)
+        }
+      </div>
+    )
   })
 }
 
-const Day = ({handleDblClick, day}) => {
+const Day = ({handleDblClick, day, selectEvent, closeEvent}) => {
   return (
     <div className='day'
          onDoubleClick={() => handleDblClick(day)}>
       <p>{day.date}</p>
       {
-        day.events && displayEvents(day.events)
+        day.events && displayEvents(day.events, selectEvent, closeEvent)
       }
     </div>
   )
