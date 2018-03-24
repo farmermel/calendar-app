@@ -12,6 +12,7 @@ const displayEvents = (events, selectEvent, closeEvent) => {
           (<article className='event-details'>
             <button onClick={closeEvent}>X</button>
             <h3>{event.eventname}</h3>
+            <hr />
             <p>Date: {`${event.monthInput} ${event.dayInput}`}</p>
             <p>Start: {event.starttime}</p>
             <p>End: {event.endtime}</p>

@@ -10,3 +10,16 @@
 h1 span {
   font-weight: lighter;
 }
+
+button {
+  border: none;
+  border-radius: 12px;
+  margin: 10px 10px 5px 10px;
+  background-color: #8a1665;
+  box-shadow: 0 0 3px #515151;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #5f0040;
+}

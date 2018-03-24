@@ -33,8 +33,12 @@
 }
 
 .event-details {
+  border: 2px solid #fff;
   border-radius: 5px;
+  padding: 10px 20px;
   position: absolute;
+  color: #000;
+  text-align: left;
   background-color: #F0F0F0;
   box-shadow: 0 0 24px grey;
   width: 260px;
