@@ -3,3 +3,32 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
+
+.column-color-2 {
+  grid-column-start: 7;
+  grid-column-end: 8;
+}
+
+.column-color-1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.column-color-1,
+.column-color-2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-color: #F0F0F0;
+}
+
+.weekday-display {
+  text-align: right;
+}
+
+.weekend {
+  padding: 7px 7px 4px 7px;
+  background-color: white;
+  color: #ccc;
+}

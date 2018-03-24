@@ -31,13 +31,13 @@ class Calendar extends Component {
   }
 
   handleDblClick = day => {
-    console.log(day)
     this.setState({formactive: day})
   }
 
   displayWeekDays = () => {
-    return weekdayArr.map( wkday => {
-      return <div>{wkday}</div>
+    return weekdayArr.map( (wkday, i) => {
+      const weekend = (i === 0 || i === 6) ? 'weekend' : 'weekday';
+      return <div className={`weekday-display ${weekend}`}>{wkday}</div>
     });
   }
 
@@ -113,7 +113,9 @@ class Calendar extends Component {
 
   render() {
     return (
-      <div className="calendar">
+      <div className='calendar'>
+        <div className='column-color-1'></div>
+        <div className='column-color-2'></div>
         {this.displayWeekDays()}
         {
           this.state.formactive

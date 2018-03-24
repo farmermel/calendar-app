@@ -3,18 +3,42 @@
   flex-direction: column;
   align-items: flex-end;
   height: 140px;
-  border: 1px solid #F0F0F0;
+  border: 1px solid #d4d4d4;
+}
+
+.day p {
+  margin: 6px 8px;
+}
+
+.events-wrap {
+  width: 94%;
+  margin: auto;
+  overflow-y: scroll;
 }
 
 .event-name {
-  margin: auto;
-  background-color: #F3DAEF;
-  width: 94%;
+  background-color: #f3daef;
+  border-radius: 3px;
+}
+
+.event-name p {
+  padding: 4px;
+  margin: 3px 0;
+}
+
+.event-name:active,
+.event-name:hover {
+  background-color: #cf73d2;
+  color: #fff;
 }
 
 .event-details {
+  border: 2px solid #fff;
   border-radius: 5px;
+  padding: 10px 20px;
   position: absolute;
+  color: #000;
+  text-align: left;
   background-color: #F0F0F0;
   box-shadow: 0 0 24px grey;
   width: 260px;

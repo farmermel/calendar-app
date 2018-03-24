@@ -3,13 +3,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #F0F0F0;
-  border: 1px solid black;
+  background-color: #f0f0f0;
+  border: 2px solid #fff;
   border-radius: 20px;
   box-shadow: 0 0 24px grey;
   width: 100%;
-  margin: 110px 0;
-  height: 400px;
+  margin: 20px 0;
+  height: 530px;
   grid-column-start: 2;
   grid-column-end: 7;
   z-index: 1;
@@ -21,6 +21,15 @@ legend {
 }
 
 input {
+  padding: 5px 21px;
+  color: gray;
+  font-size: 1.4em;
   height: 40px;
   width: 80%;
+}
+
+label {
+  font-size: 1.3em;
+  align-self: left;
+  margin: 5px 7%;
 }
